@@ -25,4 +25,8 @@ export class ParkingLotService {
         this.parking_lot_size = this.parking_lot_size + noOfSlot;
         return this.parking_lot_size;
     }
+
+    getParkingLotSize() {
+        return this.parking_lot_size;
+    }
 }
