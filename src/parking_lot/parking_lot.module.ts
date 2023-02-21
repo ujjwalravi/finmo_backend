@@ -6,5 +6,6 @@ import { ParkingLotService } from './parking_lot.service';
 @Module({
     controllers: [ParkingLotController],
     providers: [ParkingLotService],
+    exports: [ParkingLotService]
 })
 export class ParkingLotModule {}
