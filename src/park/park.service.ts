@@ -37,4 +37,8 @@ export class ParkService {
         })
         return tempList;
     }
+
+    fetchParkedCars() {
+        return this.parkedCarsMap;
+    }
 }

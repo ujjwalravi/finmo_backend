@@ -9,6 +9,7 @@ import { ParkingLotModule } from '../parking_lot/parking_lot.module';
 @Module({
     controllers: [ParkController],
     providers: [ParkService],
-    imports: [ParkingLotModule]
+    imports: [ParkingLotModule],
+    exports: [ParkService]
 })
 export class ParkModule {}
