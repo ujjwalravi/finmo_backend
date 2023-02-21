@@ -1,4 +1,4 @@
-import { Injectable, Inject, BadRequestException } from '@nestjs/common';
+import { Injectable, Inject, BadRequestException, NotFoundException } from '@nestjs/common';
 
 import { ParkingLotService } from '../parking_lot/parking_lot.service';
 import { Park } from './park.model';
@@ -8,11 +8,6 @@ export class ParkService {
     @Inject() private readonly parkingLotService: ParkingLotService
 
     private parkedCarsMap = new Map();
-
-    getSlots() {
-        console.log(this.parkingLotService);
-        return this.parkingLotService.getParkingLotSize();
-    }
 
     parkCar(car_reg_no: string, car_color: string) {
         const parkingSlotSize = this.parkingLotService.getParkingLotSize();
@@ -24,6 +19,30 @@ export class ParkService {
             }
         }
         throw new BadRequestException('Parking slots are full. Kindly wait for the slot to be freed.');
+    }
+
+    freeSlot(slot_number?: number, car_registration_no?: string) {
+        if (typeof slot_number === 'number') {
+            if (this.parkedCarsMap.has(slot_number) === false) {
+                throw new NotFoundException(`The slot number ${slot_number} is already free.`);
+            }
+            this.parkedCarsMap.delete(slot_number);
+            return slot_number;
+        }
+
+        if (typeof car_registration_no === 'string') {
+            let slotNum: number = -1;
+            this.parkedCarsMap.forEach (function(value, key) {
+                if (value.car_reg_no === car_registration_no) {
+                    slotNum = value.allocated_slot_number;
+                }
+            });
+            if (slotNum !== -1) {
+                this.parkedCarsMap.delete(slotNum);
+                return slotNum;
+            }
+            throw new NotFoundException(`Unable to find car with number ${car_registration_no} in parking.`);
+        }
     }
 
     getStatus() {

@@ -19,8 +19,20 @@ export class ParkController {
         return {allocated_slot_number: slotNumber};
     }
 
-    @Get()
-    helloWorld() {
+    @Post('clear')
+    clearSlot(
+        @Body('slot_number') slot_number?: number,
+        @Body('car_registration_no') car_registration_no?: string
+    ) {
+        const freedSlot = this.parkService.freeSlot(
+            slot_number,
+            car_registration_no
+        );
+        return {freed_slot_number: freedSlot};
+    }
+
+    @Get('status')
+    getStatus() {
         // return this.parkService.getSlots();
         return this.parkService.getStatus();
     }
