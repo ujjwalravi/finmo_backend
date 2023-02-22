@@ -2,7 +2,7 @@ import { Injectable, BadRequestException } from '@nestjs/common';
 
 @Injectable()
 export class ParkingLotService {
-    private parking_lot_size: number = -1;
+    public parking_lot_size: number = -1;
 
     initSlot(noOfSlot: number) {
         if (typeof noOfSlot !== 'number' || noOfSlot <= 0) {
