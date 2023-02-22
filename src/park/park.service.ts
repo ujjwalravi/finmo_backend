@@ -7,7 +7,7 @@ import { Park } from './park.model';
 export class ParkService {
     @Inject() private readonly parkingLotService: ParkingLotService
 
-    private parkedCarsMap = new Map();
+    public parkedCarsMap = new Map();
 
     parkCar(car_reg_no: string, car_color: string) {
         const parkingSlotSize = this.parkingLotService.getParkingLotSize();
