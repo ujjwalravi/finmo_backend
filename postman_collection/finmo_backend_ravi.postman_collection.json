@@ -70,7 +70,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"car_reg_no\": \"BR-112\",\r\n    \"car_color\": \"red\"\r\n}",
+					"raw": "{\r\n    \"car_reg_no\": \"KA-312\",\r\n    \"car_color\": \"red\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -114,12 +114,12 @@
 			"response": []
 		},
 		{
-			"name": "/registration_numbers/red - get registration_numbers of cars by color",
+			"name": "/registration_numbers/yellow- get registration_numbers of cars by color",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://finmo-backend-y5zi.vercel.app/registration_numbers/red",
+					"raw": "https://finmo-backend-y5zi.vercel.app/registration_numbers/yellow",
 					"protocol": "https",
 					"host": [
 						"finmo-backend-y5zi",
@@ -128,14 +128,14 @@
 					],
 					"path": [
 						"registration_numbers",
-						"red"
+						"yellow"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "/slot_numbers/red - get slot_number of cars by color",
+			"name": "/slot_numbers/yellow- get slot_number of cars by color",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -162,7 +162,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"car_registration_no\": \"BR-112\"\r\n}",
+					"raw": "{\r\n    \"car_registration_no\": \"BR-312\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -192,7 +192,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"slot_number\": \"BR-112\"\r\n}",
+					"raw": "{\r\n    \"slot_number\": 1\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"

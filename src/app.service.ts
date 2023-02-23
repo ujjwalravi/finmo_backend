@@ -10,7 +10,10 @@ export class AppService {
     documentation again and again.</p>\
     <p>I wish you people a great time playing with the API and parking cars in this virtual parking lot.</p><hr>\
     <h2>List of routes avaiable:-</h2>\
-    <p><b>BASE_URL = </b> <a href="https://finmo-backend-y5zi.vercel.app/">"https://finmo-backend-y5zi.vercel.app"</a></p>\
+    <p><b>BASE_URL - </b> <a href="https://finmo-backend-y5zi.vercel.app/">"https://finmo-backend-y5zi.vercel.app"</a></p>\
+    <p><b>Alternate BASE_URL - </b> <a href="http://194.195.116.249:3000/">"http://194.195.116.249:3000/"</a></p>\
+    <p><b>Postman Collection - </b> <a href="https://github.com/ujjwalravi/finmo_backend/tree/main/postman_collection">"https://github.com/ujjwalravi/finmo_backend/tree/main/postman_collection"</a></p>\
+    <p><b>Documentation - </b> <a href="https://docs.google.com/document/d/1P8A3CTVpQVfCAYdRgRQH8vo64sUyfjSKG7d20iBQUoA/edit?usp=sharing">"https://docs.google.com/document/d/1P8A3CTVpQVfCAYdRgRQH8vo64sUyfjSKG7d20iBQUoA/edit?usp=sharing"</a></p>\
     <ul>\
     <li><b>POST /parking_lot - </b> Initialise a parking lot. Can be initialised only once.</li>\
     <li><b>PATCH /parking_lot - </b> Increment the slots of parking lot.</li>\

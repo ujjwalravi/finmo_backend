@@ -39,6 +39,15 @@ describe('ParkService', () => {
 			};
 			expect(parkVehicle).toThrowError();
 		});
+
+		it('should throw error if any one of the parameter is missing', () => {
+			secondService.parking_lot_size = 1;
+			service.parkedCarsMap.set(1, new Park(1, "KA-123", "green"));
+			const parkVehicle = () => {
+				return service.parkCar(undefined, "white");
+			};
+			expect(parkVehicle).toThrowError();
+		});
 	});
 
     describe('freeSlot', () => {

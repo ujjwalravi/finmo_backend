@@ -10,6 +10,9 @@ export class ParkService {
     public parkedCarsMap = new Map();
 
     parkCar(car_reg_no: string, car_color: string) {
+        if (!car_reg_no || !car_color) {
+            throw new BadRequestException(`One of the required parameters either 'car_reg_no' or 'car_color' is missing.`);
+        }
         const parkingSlotSize = this.parkingLotService.getParkingLotSize();
         for (let i=1; i<=parkingSlotSize; i++) {
             if (this.parkedCarsMap.has(i) === false) {
