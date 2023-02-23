@@ -1,0 +1,240 @@
+{
+	"info": {
+		"_postman_id": "f87d2c16-f423-4981-b267-62ec5c0134c1",
+		"name": "finmo_backend_ravi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/parking_lot - initialise slots",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"no_of_slot\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://finmo-backend-y5zi.vercel.app/parking_lot",
+					"protocol": "https",
+					"host": [
+						"finmo-backend-y5zi",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"parking_lot"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/parking_lot - increment slots",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"increment_slot\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://finmo-backend-y5zi.vercel.app/parking_lot",
+					"protocol": "https",
+					"host": [
+						"finmo-backend-y5zi",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"parking_lot"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/park - park a car",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"car_reg_no\": \"BR-112\",\r\n    \"car_color\": \"red\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://finmo-backend-y5zi.vercel.app/park",
+					"protocol": "https",
+					"host": [
+						"finmo-backend-y5zi",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"park"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/park/status - get parking lot status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://finmo-backend-y5zi.vercel.app/park/status",
+					"protocol": "https",
+					"host": [
+						"finmo-backend-y5zi",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"park",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/registration_numbers/red - get registration_numbers of cars by color",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://finmo-backend-y5zi.vercel.app/registration_numbers/red",
+					"protocol": "https",
+					"host": [
+						"finmo-backend-y5zi",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"registration_numbers",
+						"red"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/slot_numbers/red - get slot_number of cars by color",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://finmo-backend-y5zi.vercel.app/slot_numbers/red",
+					"protocol": "https",
+					"host": [
+						"finmo-backend-y5zi",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"slot_numbers",
+						"red"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/park/clear - free a slot by passing reg no",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"car_registration_no\": \"BR-112\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://finmo-backend-y5zi.vercel.app/park/clear",
+					"protocol": "https",
+					"host": [
+						"finmo-backend-y5zi",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"park",
+						"clear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/park/clear - free a slot by passing slot no",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"slot_number\": \"BR-112\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://finmo-backend-y5zi.vercel.app/park/clear",
+					"protocol": "https",
+					"host": [
+						"finmo-backend-y5zi",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"park",
+						"clear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/park/details - get details of occupied and free slots",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://finmo-backend-y5zi.vercel.app/park/details",
+					"protocol": "https",
+					"host": [
+						"finmo-backend-y5zi",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"park",
+						"details"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
