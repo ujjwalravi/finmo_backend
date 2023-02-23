@@ -57,6 +57,8 @@ Alternate BASE_URL = "http://194.195.116.249:3000/"
 ```
 
 ## Author Details
+```bash
 Name - Ravi Ujjwal
 LinkedIn - https://www.linkedin.com/in/ravi-ujjwal/
 Email = ravi.ujjwal2000@gmail.com
+```
