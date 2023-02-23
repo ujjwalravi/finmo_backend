@@ -60,4 +60,13 @@ export class ParkService {
     fetchParkedCars() {
         return this.parkedCarsMap;
     }
+
+    fetchParkingLotDetails() {
+        if (this.parkingLotService.parking_lot_size === -1) {
+            throw new NotFoundException('Parking slots are not initialised. Kindly initialise it first.');
+        }
+        const total_slots = this.parkingLotService.parking_lot_size;
+        const occupied_slots = this.parkedCarsMap.size;
+        return {"total_slots": total_slots, "occupied_slots": occupied_slots, "free_slots": total_slots-occupied_slots};
+    }
 }
