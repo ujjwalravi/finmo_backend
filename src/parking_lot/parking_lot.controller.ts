@@ -22,9 +22,4 @@ export class ParkingLotController {
         const totalSlot = this.parkingLotService.incrementSlot(noOfSlot);
         return {total_slot: totalSlot};
     }
-
-    @Get()
-    helloWorld() {
-        return "Hellow World";
-    }
 }

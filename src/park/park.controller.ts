@@ -31,9 +31,13 @@ export class ParkController {
         return {freed_slot_number: freedSlot};
     }
 
+    @Get('details')
+    parkingLotDetails() {
+        return this.parkService.fetchParkingLotDetails();
+    }
+
     @Get('status')
     getStatus() {
-        // return this.parkService.getSlots();
         return this.parkService.getStatus();
     }
 }
